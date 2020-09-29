@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 3;
+}
+
+h2 {
+  font-weight: normal;
+  color: #494949;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  color: #494949;
+}
+
+input {
+  font: inherit;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: #494949;
+  width: 100%;
+  display: block;
+  margin: 1rem 0;
+}
+
+input:focus {
+  outline: none;
+  border-color: #fce40b;
+}
+
+button {
+  font: inherit;
+  border: 1px solid #fce40b;
+  color: rgb(3, 3, 3);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background: #fce40b;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background: #fcffd9;
+  border-color: #fcffd9;
+}
+
+li {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 5px;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 300;
+}
+
+.inline-controls {
+  display: flex;
+}
+
+.control {
+  margin: 1rem;
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  background: white;
+  border-radius: 10px;
+  width: 80%;
+  top: 30vh;
+  left: 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: none;
+}
+
+.modal .modal__content {
+  padding: 1rem;
+}
+
+.modal .modal__actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal.visible {
+  display: block;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+#done-list {
+  display: none;
+  list-style: none;
+  padding: 1rem;
+  background-color: rgb(227, 255, 227);
+}
+
+#done-list.visible {
+  display: block; 
+}
+
+#user-input,
+#active-list,
+#high-priority-list,
+#medium-priority-list, 
+#low-priority-list,
+#filter {
+  width: 400rem;
+  max-width: 100%;
+  margin: 3rem auto;
+}
+
+#active-list { 
+  display: none;
+  list-style: none;
+  padding: 2rem;
+}
+#high-priority-list {
+  list-style: none;
+  padding: 2rem;
+}
+
+#medium-priority-list {
+  list-style: none;
+  padding: 2rem;
+}
+
+#low-priority-list {
+  list-style: none;
+  padding: 2rem;
+}
+
+#active-list.visible {
+  display: block;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+/* #high-priority-list.visible {
+  display: block;
+}
+
+#medium-priority-list.visible {
+  display: block;
+}
+
+#low-priority-list.visible {
+  display: block;
+} */
+
+.droppable {
+  background: rgb(250, 250, 143);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
