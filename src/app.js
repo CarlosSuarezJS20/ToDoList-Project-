@@ -17,7 +17,7 @@ class TaskBuilder {
     this.lists = new Lists(); 
 
     addTaskBtn.addEventListener('click', this.createTask.bind(this)); 
-  }
+  }     
 
   createTask() {
     if(this.userInputAccess.value.trim() === '') {
