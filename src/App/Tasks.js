@@ -7,7 +7,6 @@ export class Task {
   constructor(taskDescription, set) {
     this.taskTemplateEl = document.getElementById('task-template');
     this.doneTemplateEl = document.getElementById('done-template'); 
-    console.log(this.doneTemplateEl); 
     this.text = taskDescription; 
     this.set = set;
     this.id = idGeneration.next().value
@@ -19,13 +18,13 @@ export class Task {
     const taskElement = taskTemplateElement.querySelector('div'); 
     taskElement.id = `li-${this.id}`; 
     taskElement.draggable = true; 
+    taskElement.querySelector('h2').textContent = this.text; 
     const itemButtonsAccess = taskElement.querySelectorAll('button')
     const doneBtnAccess = itemButtonsAccess[0]; 
 
     doneBtnAccess.addEventListener('click', () => {
       this.set = 'done-list'; 
       const doneHTMLEl = document.importNode(this.doneTemplateEl.content, true);
-      console.log(doneHTMLEl); 
       const doneEl = doneHTMLEl.querySelector('div'); 
       doneEl.id = `li-${this.id}`; 
       doneEl.querySelector('h2').textContent = this.text; 
