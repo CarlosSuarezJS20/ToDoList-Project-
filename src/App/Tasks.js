@@ -16,7 +16,7 @@ export class Task {
   generateTaskHTML() {
     const taskTemplateElement = document.importNode(this.taskTemplateEl.content, true); 
     const taskElement = taskTemplateElement.querySelector('div'); 
-    taskElement.id = `li-${this.id}`; 
+    taskElement.id = `li-${this.id}`;      
     taskElement.draggable = true; 
     taskElement.querySelector('h2').textContent = this.text; 
     const itemButtonsAccess = taskElement.querySelectorAll('button')
