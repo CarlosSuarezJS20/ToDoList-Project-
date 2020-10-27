@@ -38,3 +38,4 @@ class TaskBuilder {
 }
 
 new TaskBuilder();
+// This initialises the app
