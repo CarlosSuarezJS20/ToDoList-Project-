@@ -1,14 +1,13 @@
-import { PriorityLists } from './PriorityLists'; 
+import { PriorityLists } from './PriorityLists';
 
 export class Lists {
-  constructor() {
-    this.inIt(); 
-  }
+	constructor() {
+		this.inIt();
+	}
 
-  inIt() {
-    new PriorityLists('high-priority-list', 'high-prior-list');
-    new PriorityLists('medium-priority-list', 'mid-prior-list'); 
-    new PriorityLists('low-priority-list', 'low-prior-list'); 
-  }
+	inIt() {
+		new PriorityLists('high-priority-list', 'high-prior-list');
+		new PriorityLists('medium-priority-list', 'mid-prior-list');
+		new PriorityLists('low-priority-list', 'low-prior-list');
+	}
 }
-

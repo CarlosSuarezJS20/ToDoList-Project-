@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>To Do List </title>
-    <link rel="stylesheet" href="assets/styles/app.css" />
-    <script src="assets/scripts/app.js" defer type="module"></script>
-  </head>
-  <body>
-  <template id='task-template'>
-    <div>
-      <li>
-        <h2></h2>
-        <button>Done</button>
-        <button>Cancel</button>
-      </li> 
-    </div>
-  </template>
-  <template id='done-template'>
-    <div>
-      <li>
-        <h2></h2>
-        <button>Ractivate</button>
-        <button>Cancel</button>
-      </li> 
-    </div>
-  </template>
-  <h1 class="card">TO DO LIST APP</h1> 
-  <div id="backdrop"></div>
-  <section id="user-input" class="card">
-    <div class="control">
-      <label for="title">Add A Task To Your List</label>
-      <input type="text" id="item"/>
-    </div>
-    <button id="add-item-btn">Add Task</button>
-  </section>
-  <section id="filter" class="card">
-    <label >Open Done Tasks List</label>
-    <button id="done-btn">Open</button>
-    <ul id="done-list" class="card"></ul>
-  </section>
-  <div class="modal" id="delete-modal">
-    <p class="modal__content">
-      Are you sure you want to delete this item? This action can't be made
-      undone!
-    </p>
-    <div class="modal__actions">
-      <button class="btn btn--passive">No (Cancel)</button>
-      <button class="btn btn--danger">Yes</button>
-    </div>
-  </div>
-    <section class="card">
-      <header>
-        <h2>Active Tasks</h2>
-      </header>
-      <ul id="active-list" class="card"></ul>
-    </section>
-    <section id="high-prior-list" class="card">
-      <header>
-        <h2>High Priority List</h2>
-      </header>
-      <!-- <ul id="high-priority-list" class="card"></ul> -->
-    </section>
-    <section id="mid-prior-list"  class="card">
-      <header>
-        <h2>Medium Priority List</h2>
-      </header>
-      <!-- <ul id="medium-priority-list" class="card"></ul> -->
-    </section>
-    <section id="low-prior-list" class="card">
-      <header>
-        <h2>Low Priority List</h2>
-      </header>
-      <!-- <ul id="low-priority-list" class="card"></ul> -->
-    </section>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>To Do List</title>
+		<link rel="stylesheet" href="assets/styles/app.css" />
+		<script src="assets/scripts/app.js" defer type="module"></script>
+	</head>
+	<body>
+		<template id="task-template">
+			<div>
+				<li>
+					<h2></h2>
+					<button>Done</button>
+					<button>Cancel</button>
+				</li>
+			</div>
+		</template>
+		<template id="done-template">
+			<div>
+				<li>
+					<h2></h2>
+					<button>Ractivate</button>
+					<button>Cancel</button>
+				</li>
+			</div>
+		</template>
+		<h1 class="card">TO DO LIST APP</h1>
+		<div id="backdrop"></div>
+		<section id="user-input" class="card">
+			<div class="control">
+				<label for="title">Add A Task To Your List</label>
+				<input type="text" id="item" />
+			</div>
+			<button id="add-item-btn">Add Task</button>
+		</section>
+		<section id="filter" class="card">
+			<label>Open Done Tasks List</label>
+			<button id="done-btn">Open</button>
+			<ul id="done-list" class="card"></ul>
+		</section>
+		<div class="modal" id="delete-modal">
+			<p class="modal__content">
+				Are you sure you want to delete this item? This action can't be made
+				undone!
+			</p>
+			<div class="modal__actions">
+				<button class="btn btn--passive">No (Cancel)</button>
+				<button class="btn btn--danger">Yes</button>
+			</div>
+		</div>
+		<section class="card">
+			<header>
+				<h2>Active Tasks</h2>
+			</header>
+			<ul id="active-list" class="card"></ul>
+		</section>
+		<section id="high-prior-list" class="card">
+			<header>
+				<h2>High Priority List</h2>
+			</header>
+			<!-- <ul id="high-priority-list" class="card"></ul> -->
+		</section>
+		<section id="mid-prior-list" class="card">
+			<header>
+				<h2>Medium Priority List</h2>
+			</header>
+			<!-- <ul id="medium-priority-list" class="card"></ul> -->
+		</section>
+		<section id="low-prior-list" class="card">
+			<header>
+				<h2>Low Priority List</h2>
+			</header>
+			<!-- <ul id="low-priority-list" class="card"></ul> -->
+		</section>
+	</body>
 </html>
